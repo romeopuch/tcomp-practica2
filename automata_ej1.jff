@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<structure>
+	<type>fa</type>
+	<automaton>
+		<state id="0" name="INITIAL">
+			<x>150.0</x>
+			<y>150.0</y>
+			<initial/>
+		</state>
+		<state id="1" name="BLOQUEC">
+			<x>150.0</x>
+			<y>450.0</y>
+		</state>
+		<state id="2" name="REGLAS">
+			<x>500.0</x>
+			<y>150.0</y>
+		</state>
+		<state id="3" name="CODIGO">
+			<x>850.0</x>
+			<y>150.0</y>
+		</state>
+		<state id="4" name="ACCION">
+			<x>500.0</x>
+			<y>470.0</y>
+		</state>
+		<state id="5" name="CADENA">
+			<x>170.0</x>
+			<y>790.0</y>
+		</state>
+		<state id="6" name="COMLINEA">
+			<x>500.0</x>
+			<y>830.0</y>
+		</state>
+		<state id="7" name="COMMULTI">
+			<x>830.0</x>
+			<y>790.0</y>
+		</state>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>^%{</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>2</to>
+			<read>^%%</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>0</to>
+			<read>otro</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>0</to>
+			<read>^%}</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>\n / c1++</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>otro</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>4</to>
+			<read>patrón blancos {</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>4</to>
+			<read>/ r++, c2++, nivel=1</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>3</to>
+			<read>^%%</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>2</to>
+			<read>otro</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>2</to>
+			<read>} con nivel=1</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>2</to>
+			<read>/ nivel=0</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>4</to>
+			<read>\n / c2++</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>4</to>
+			<read>{ / nivel++</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>4</to>
+			<read>} con nivel&gt;1 / nivel--</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>4</to>
+			<read>otro</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>5</to>
+			<read>"</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>6</to>
+			<read>//</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>7</to>
+			<read>/*</read>
+		</transition>
+		<transition>
+			<from>5</from>
+			<to>4</to>
+			<read>"</read>
+		</transition>
+		<transition>
+			<from>5</from>
+			<to>5</to>
+			<read>\n / c2++</read>
+		</transition>
+		<transition>
+			<from>5</from>
+			<to>5</to>
+			<read>otro</read>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>4</to>
+			<read>\n / c2++</read>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>6</to>
+			<read>otro</read>
+		</transition>
+		<transition>
+			<from>7</from>
+			<to>4</to>
+			<read>*/</read>
+		</transition>
+		<transition>
+			<from>7</from>
+			<to>7</to>
+			<read>\n / c2++</read>
+		</transition>
+		<transition>
+			<from>7</from>
+			<to>7</to>
+			<read>otro</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>3</to>
+			<read>\n / c3++</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>3</to>
+			<read>otro</read>
+		</transition>
+	</automaton>
+</structure>
