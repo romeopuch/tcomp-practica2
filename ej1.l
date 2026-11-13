@@ -1,7 +1,7 @@
 /*
  * Práctica 2 - Teoría de la Computación - Ejercicio 1
- * Autores: NIA XXXXXX  Nombre Apellidos
- *          NIA XXXXXX  Nombre Apellidos
+ * Autores: Romeo Puch         NIP: 925301
+ *          Javier Sánchez Mir  NIP: 926247
  *
  * Analiza un fichero fuente de Flex y muestra:
  *   C1: líneas dentro de los bloques %{ ... %} de la sección de declaraciones
