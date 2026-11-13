@@ -1,0 +1,22 @@
+/* comentario en declaraciones con %{ dentro */
+%{
+/* comentario
+   multilinea */
+#include <stdio.h>
+%}
+%x ESTADO
+%%
+"{"	{ printf("{"); /* } */ }
+"}"[a-z]*	{
+	// llave } en comentario de linea
+	if (1) {
+		for (;;) { break; }
+	}
+	printf("}%%{\n");
+}
+<ESTADO>\n	{ BEGIN(INITIAL); }
+.	{ }
+%%
+/* fin { */
+int main() { return 0; }
+

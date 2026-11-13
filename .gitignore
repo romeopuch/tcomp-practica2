@@ -1,0 +1,8 @@
+# Generados al compilar
+*.yy.c
+lex.yy.c
+ej1
+ej2
+# Ejecutables del profesor
+correctos/
+Ejecutables correctos P2.zip

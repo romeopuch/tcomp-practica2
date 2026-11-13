@@ -1,0 +1,26 @@
+  //mi nombre
+%{
+#include<math.h>      //comentario%}%}%}
+
+int a = 0;
+%}
+
+DIGITO [0-9]
+
+%{
+int b = 0;
+%}
+
+%%
+{DIGITO}+        {printf("hola}}}");
+a++;}
+
+ggg                 {}
+"aabb{"[A-Z]+ { a++;
+ if (a > b) { /*comentario varias lineas
+    }} fin comentario*/ b++;}
+}
+%%
+int main() {
+    yylex();
+}
